@@ -1,38 +1,109 @@
 .App {
   text-align: center;
+  background-color: black;
+  color: goldenrod;
+  margin: 0;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#logo {
+  width: 80px;
+  height: 80px;
+  float: left;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+img {
+  border-radius: 10px;
+}
+
+.linkDiv {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: flex-end;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: goldenrod;
+  font-size: 26px;
+  margin-right: 65px;
+  padding: 4px 4px;
+  /* position: fixed;  */
+}
+
+a:hover {
+  background-color: goldenrod;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Custom scroll-bar */
+::-webkit-scrollbar {
+  width: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+::-webkit-scrollbar-track {
+  background: #211f1f;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: goldenrod;
+}
+
+/* ----------------------------------- */
+
+/* search bar  */
+
+form {
+  width: 100%;
+  max-width: 500px;
+  background-color: lightslategrey;
+  opacity: 0.6;
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  padding: 10px;
+}
+
+form input {
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 20px;
+  font-size: 20px;
+  color: gold;
+}
+
+::placeholder {
+  color: white;
+}
+
+/* search button */
+
+form button img {
+  width: 20px;
+}
+
+form button {
+  border: 0;
+  width: 60px;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+
+#search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 80px 15px 0;
+
+}
+
+.userDiv {
+  padding: 10px;
 }
