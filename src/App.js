@@ -5,6 +5,7 @@ import Nav from './components/Nav';
 import Card from './components/Card';
 import { useState, useEffect } from 'react';
 import ImageSearch from './components/ImageSearch';
+import { ThemeProvider, useTheme } from "./ThemeContext";
 
 
 function App() {
@@ -12,6 +13,8 @@ function App() {
   const [images, setImages] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [term, setTerm] = useState('');
+  const { theme } = useTheme();
+
 
   useEffect(() => {
     fetch(`https://pixabay.com/api/?key=${process.env.REACT_APP_PIX_API_KEY}&q=${term}&image_type=photo&pretty=true`)
@@ -25,7 +28,12 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className="App"
+      style={{
+        backgroundColor: theme === "dark" ? "black" : "white",
+        color: theme === "dark" ? "goldenrod" : "black",
+      }}
+    >
       <Header />
       <Nav />
       <div>
