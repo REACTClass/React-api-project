@@ -51,4 +51,14 @@ function App() {
   );
 }
 
-export default App;
+// export default App;
+
+function Mode() {
+  return (
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
+  );
+}
+
+export default Mode;
